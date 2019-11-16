@@ -11,7 +11,7 @@ namespace JsonPlaceholderApp.Services
     public class MockDataStore : IDataStore<Item>
     {
         private static readonly HttpClient Client;
-        private const string Url = "http://rallycoding.herokuapp.com/api/music_albums";
+        private const string Url = "https://github.com/LaNC1LoT/JsonPlaceholderApp/blob/master/db.json";//"http://rallycoding.herokuapp.com/api/music_albums";
 
         static MockDataStore()
         {

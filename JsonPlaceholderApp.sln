@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholderApp.Android", "JsonPlaceholderApp\JsonPlaceholderApp.Android\JsonPlaceholderApp.Android.csproj", "{0A2B6AF9-522B-4EC3-890E-2F489937C643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholderApp", "JsonPlaceholderApp\JsonPlaceholderApp\JsonPlaceholderApp.csproj", "{084E4E16-E55A-486F-ADC4-EF4CA1A48DB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPlaceholderApp", "JsonPlaceholderApp\JsonPlaceholderApp\JsonPlaceholderApp.csproj", "{084E4E16-E55A-486F-ADC4-EF4CA1A48DB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

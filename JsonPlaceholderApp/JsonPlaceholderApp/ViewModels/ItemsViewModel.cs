@@ -15,7 +15,9 @@ namespace JsonPlaceholderApp.ViewModels
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsViewModel()
+        public Action<string, string> Message { get; set; }
+
+        public ItemsViewModel() 
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();
@@ -41,6 +43,7 @@ namespace JsonPlaceholderApp.ViewModels
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
+                Message("Alert", ex.InnerException?.Message ?? ex.Message);
             }
             finally
             {

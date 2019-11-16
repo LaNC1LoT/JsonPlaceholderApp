@@ -23,6 +23,8 @@ namespace JsonPlaceholderApp.Views
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
+
+            viewModel.Message = Display;
         }
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -33,6 +35,7 @@ namespace JsonPlaceholderApp.Views
             //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
             ItemsListView.SelectedItem = null;
+            
         }
 
         //async void AddItem_Clicked(object sender, EventArgs e)
@@ -40,11 +43,17 @@ namespace JsonPlaceholderApp.Views
         //    await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         //}
 
+        private async void Display(string title, string message)
+        {
+            await DisplayAlert(title, message, "OK");
+        }
+        
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
+            if (!viewModel.Items.Any())
                 viewModel.LoadItemsCommand.Execute(null);
         }
     }
